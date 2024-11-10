@@ -1,5 +1,7 @@
-from PyQt5.QtWidgets import QFileDialog
+from PyQt5.QtWidgets import QFileDialog, QListWidgetItem
 from PyQt5 import QtCore
+from PyQt5.QtCore import Qt
+
 class Controls:
     def __init__(self, main_window, player):
         self.main_window = main_window
@@ -26,10 +28,18 @@ class Controls:
 
     def load_music(self):
         # 弹出文件选择对话框，选择音乐文件
-        file_path, _ = QFileDialog.getOpenFileName(self.main_window, "打开音乐文件", "", "音频文件 (*.mp3 *.wav)")
-        if file_path:
-            self.player.load_music(file_path)  # 将路径传递给播放器进行加载
+        file_paths, _ = QFileDialog.getOpenFileNames(self.main_window, "选择音乐文件", "", "音频文件 (*.mp3 *.wav)")
+        if file_paths:
+            for file_path in file_paths:
+                self.player.load_music(file_path)  # 加载文件
+                self.add_song_to_playlist(file_path)  # 添加到播放列表
 
+    def add_song_to_playlist(self, file_path):
+        # 将歌曲添加到列表中
+        song_name = file_path.split('/')[-1]  # 获取文件名
+        item = QListWidgetItem(song_name)
+        item.setData(Qt.UserRole, file_path)  # 存储文件路径
+        self.main_window.playlist_widget.addItem(item)
     def play_from_playlist(self, item):
         file_path = item.data(QtCore.Qt.UserRole)  # 获取歌曲路径
         self.player.load_music(file_path)
