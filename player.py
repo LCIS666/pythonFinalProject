@@ -1,13 +1,14 @@
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtCore import QUrl, QTimer
 from mutagen.mp3 import MP3
+
 class Player:
     def __init__(self, main_window):
         self.media_player = QMediaPlayer()
         self.main_window = main_window  # 引入主窗口以便更新进度条等控件
         self.progress_timer = QTimer()
         self.progress_timer.timeout.connect(self.update_progress)
-
+        self.media_player = QMediaPlayer()
     def load_music(self, file_path):
         # 设置媒体内容并加载音乐
         url = QUrl.fromLocalFile(file_path)
@@ -52,8 +53,6 @@ class Player:
         print("Attempting to play music.")
         self.media_player.play()
 #显示歌曲信息
-    def __init__(self):
-        self.media_player = QMediaPlayer()
 
     def load_music(self, file_path):
         url = QUrl.fromLocalFile(file_path)

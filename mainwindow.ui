@@ -108,7 +108,17 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>歌曲信息显示</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="playlist_widget">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>30</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
     </property>
    </widget>
   </widget>

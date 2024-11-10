@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f585a84e-f8bb-4bdb-aec5-0712773a935f" name="更改" comment="加载音乐文件功能（但无法正常播放）">
+    <list default="true" id="f585a84e-f8bb-4bdb-aec5-0712773a935f" name="更改" comment="显示歌曲信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_mainwindow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731245920671</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="显示歌曲信息">
+      <option name="closed" value="true" />
+      <created>1731247361185</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731247361185</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +205,7 @@
     <MESSAGE value="添加音量控制功能（修正）" />
     <MESSAGE value="添加进度条" />
     <MESSAGE value="加载音乐文件功能（但无法正常播放）" />
-    <option name="LAST_COMMIT_MESSAGE" value="加载音乐文件功能（但无法正常播放）" />
+    <MESSAGE value="显示歌曲信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="显示歌曲信息" />
   </component>
 </project>
