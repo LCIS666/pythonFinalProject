@@ -20,7 +20,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>120</x>
       <y>350</y>
       <width>121</width>
       <height>71</height>
@@ -54,6 +54,19 @@
     </property>
     <property name="text">
      <string>停止</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="volume_slider">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>120</y>
+      <width>22</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
     </property>
    </widget>
   </widget>
