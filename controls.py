@@ -10,7 +10,7 @@ class Controls:
         # 添加更多控件连接逻辑（如音量调节、进度条更新）
 
 
-    #添加音量控制功能
+#添加音量控制功能
     def __init__(self, main_window, player):
         self.main_window = main_window
         self.player = player
