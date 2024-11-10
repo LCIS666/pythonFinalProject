@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f585a84e-f8bb-4bdb-aec5-0712773a935f" name="更改" comment="Start spot">
-      <change beforePath="$PROJECT_DIR$/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
+    <list default="true" id="f585a84e-f8bb-4bdb-aec5-0712773a935f" name="更改" comment="添加音量控制功能">
       <change beforePath="$PROJECT_DIR$/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731243217832</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加音量控制功能">
+      <option name="closed" value="true" />
+      <created>1731243826023</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731243826023</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +165,7 @@
     <MESSAGE value="ceshi" />
     <MESSAGE value="1" />
     <MESSAGE value="Start spot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start spot" />
+    <MESSAGE value="添加音量控制功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加音量控制功能" />
   </component>
 </project>
