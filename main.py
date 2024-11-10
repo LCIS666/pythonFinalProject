@@ -13,8 +13,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
 
-        # 初始化播放器
-        self.player = Player()
+        # 初始化播放器，传入主窗口
+        self.player = Player(self)
         self.controls = Controls(self, self.player)
 
         # 连接控件与方法
