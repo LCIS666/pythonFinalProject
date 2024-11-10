@@ -1,3 +1,4 @@
 每次完成 UI 设计后，运行以下命令来生成 ui_mainwindow.py 文件：
 pyuic5 mainwindow.ui -o ui_mainwindow.py
 公钥私钥文件所在地址：C:\Users\刘畅/.ssh/id_ed25519
+git config --global user.name "LCIS666"
