@@ -1,6 +1,6 @@
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtCore import QUrl, QTimer
-
+from mutagen.mp3 import MP3
 class Player:
     def __init__(self, main_window):
         self.media_player = QMediaPlayer()
@@ -39,3 +39,30 @@ class Player:
         if duration > 0:
             new_position = (position / 100) * duration
             self.media_player.setPosition(new_position)
+    # 在 player.py 中添加调试输出
+    def load_music(self, file_path):
+        url = QUrl.fromLocalFile(file_path)
+        self.media_player.setMedia(QMediaContent(url))
+        if not self.media_player.media().isNull():
+            print(f"Music loaded from: {file_path}")
+        else:
+            print("Failed to load music.")
+
+    def play(self):
+        print("Attempting to play music.")
+        self.media_player.play()
+#显示歌曲信息
+    def __init__(self):
+        self.media_player = QMediaPlayer()
+
+    def load_music(self, file_path):
+        url = QUrl.fromLocalFile(file_path)
+        self.media_player.setMedia(QMediaContent(url))
+
+        # 提取歌曲元数据
+        audio_file = MP3(file_path)
+        title = audio_file.tags.get('TIT2', '未知标题')  # 获取歌曲标题
+        artist = audio_file.tags.get('TPE1', '未知艺术家')  # 获取艺术家名称
+
+        # 更新界面显示
+        self.main_window.song_label.setText(f"{title} - {artist}")
