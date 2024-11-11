@@ -1,7 +1,6 @@
 import sys
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
-
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from ui_mainwindow import Ui_MainWindow
 from player import Player

@@ -1,21 +1,22 @@
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
-from PyQt5.QtCore import QUrl, QTimer
+from PyQt5.QtCore import QUrl, QTimer, QObject
 from mutagen.mp3 import MP3
 
-class Player:
+class Player(QObject):
     def __init__(self, main_window):
+        super().__init__()  # 显式调用父类的构造函数
         self.media_player = QMediaPlayer()
         self.main_window = main_window  # 引入主窗口以便更新进度条等控件
         self.progress_timer = QTimer()
-        self.progress_timer.timeout.connect(self.update_progress)
-        self.media_player = QMediaPlayer()
-    def load_music(self, file_path):
-        # 设置媒体内容并加载音乐
-        url = QUrl.fromLocalFile(file_path)
-        self.media_player.setMedia(QMediaContent(url))
+        self.progress_timer.timeout.connect(self.update_progress)  # 连接进度更新信号
 
     def play(self):
+        print("Attempting to play music...")
         self.media_player.play()
+        if self.media_player.state() == QMediaPlayer.PlayingState:
+            print("Music is playing.")
+        else:
+            print(f"Failed to play music. State: {self.media_player.state()}")
         self.progress_timer.start(1000)  # 每秒更新一次进度条
 
     def pause(self):
@@ -40,23 +41,15 @@ class Player:
         if duration > 0:
             new_position = (position / 100) * duration
             self.media_player.setPosition(new_position)
-    # 在 player.py 中添加调试输出
+
+    # 显示歌曲信息
     def load_music(self, file_path):
         url = QUrl.fromLocalFile(file_path)
         self.media_player.setMedia(QMediaContent(url))
-        if not self.media_player.media().isNull():
-            print(f"Music loaded from: {file_path}")
-        else:
+        if self.media_player.media().isNull():
             print("Failed to load music.")
-
-    def play(self):
-        print("Attempting to play music.")
-        self.media_player.play()
-#显示歌曲信息
-
-    def load_music(self, file_path):
-        url = QUrl.fromLocalFile(file_path)
-        self.media_player.setMedia(QMediaContent(url))
+        else:
+            print(f"Music loaded: {file_path}")
 
         # 提取歌曲元数据
         audio_file = MP3(file_path)

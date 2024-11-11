@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f585a84e-f8bb-4bdb-aec5-0712773a935f" name="更改" comment="添加歌曲列表功能">
+    <list default="true" id="f585a84e-f8bb-4bdb-aec5-0712773a935f" name="更改" comment="歌曲列表功能(完善)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/file_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731248221601</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="歌曲列表功能(完善)">
+      <option name="closed" value="true" />
+      <created>1731248890636</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731248890636</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +223,7 @@
     <MESSAGE value="加载音乐文件功能（但无法正常播放）" />
     <MESSAGE value="显示歌曲信息" />
     <MESSAGE value="添加歌曲列表功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加歌曲列表功能" />
+    <MESSAGE value="歌曲列表功能(完善)" />
+    <option name="LAST_COMMIT_MESSAGE" value="歌曲列表功能(完善)" />
   </component>
 </project>
